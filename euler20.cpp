@@ -23,7 +23,7 @@ int main()
 //prevents me from haviing to to through the other function for every element
 //of the string
    factAsString = strFactorial(n);
-   std::cout <<  factAsString << endl;
+   std::cout <<  factAsString << std::endl;
    
    for(char c : factAsString)
    {

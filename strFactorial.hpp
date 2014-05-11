@@ -9,10 +9,8 @@
  * Computes the factorial of a number and returns it as a string
  */
 
-//I know its bad practise but its the only way that it would compile
-using namespace std;
 
-string strFactorial(unsigned int n)
+std::string strFactorial(unsigned int n)
 {
 	//just does a normal loop if the reqested factorial is low enough
 	if(n <= 20)
@@ -28,10 +26,10 @@ string strFactorial(unsigned int n)
 	{
 		//creates the mpz_class of type n (int)
 		mpz_class result(n);
-		string returnString;
+		std::string returnString;
 		
 		//creates a stream that we use later to return the result
-		stringstream ss (stringstream::in | stringstream:: out);
+		std::stringstream ss (std::stringstream::in | std::stringstream:: out);
 		
 		//multiples result times in as n spporaches 1
 		while( n --> 1)
