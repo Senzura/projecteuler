@@ -9,13 +9,13 @@ Find the sum of the digits in the number 100! */
 #include <iostream>
 #include <string>
 #include "strFactorial.hpp"
+#include "strIntSum.hpp"
 
 int main()
 {
    unsigned n;
    //holds the facotiral a string
    std::string factAsString;
-   int factSum = 0;
    
    printf("Input a number to find the sum of the digits of it's factorial \n");
    std::cin >> n;
@@ -25,10 +25,7 @@ int main()
    factAsString = strFactorial(n);
    std::cout <<  factAsString << std::endl;
    
-   for(char c : factAsString)
-   {
-	   factSum += (c - '0');
-   }
+   int factSum = strIntSum(factAsString);
    
    std::cout << factSum;
    return 0;
